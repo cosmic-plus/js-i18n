@@ -10,7 +10,7 @@ if (env.isBrowser) {
   const Y18N = require("y18n-browser")
   module.exports = i18n = new Y18N()
 } else {
-  const y18n = require("y18n")
+  const y18n = env.nodeRequire("y18n")
   module.exports = i18n = y18n({ updateFiles: false })
 }
 
