@@ -1,0 +1,29 @@
+{
+  "name": "@cosmic-plus/i18n",
+  "version": "1.0.0",
+  "description": "Lightweight i18n implementation that works both in Node.js and browser",
+  "author": "MisterTicot",
+  "repository": "github:cosmic-plus/node-i18n",
+  "license": "MIT",
+  "browserslist": "last 4 versions, > 0.1%",
+  "main": "i18n.js",
+  "keywords": [
+    "i18n",
+    "translation",
+    "lightweight",
+    "node",
+    "browser"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix *.js"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.1"
+  },
+  "dependencies": {
+    "@cosmic-plus/jsutils": "^1.6.0",
+    "y18n": "^4.0.0",
+    "y18n-browser": "^1.0.2"
+  }
+}
