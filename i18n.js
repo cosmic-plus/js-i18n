@@ -20,6 +20,18 @@ if (env.isBrowser) {
  */
 
 /**
+ * Returns a translated i18n HTML element
+ *
+ * @param  {String} message
+ * @return {HTMLElement}
+ */
+i18n.__t = env.isBrowser && function (message) {
+  const domNode = document.createElement("i18n")
+  domNode.textContent = i18n.__(message)
+  return domNode
+}
+
+/**
  * Returns the system locale.
  *
  * @return {String}

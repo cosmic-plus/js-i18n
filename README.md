@@ -44,7 +44,7 @@ i18n.useSystemLocale()   //or i18n.setLocale(language)
 
 ```js
 // Load translation utilities
-const {__, __n} = require("@cosmic-plus/i18n")
+const {__, __n, __t} = require("@cosmic-plus/i18n")
 
 // Simple message.
 console.log(__("Hello, world!"))
@@ -63,6 +63,9 @@ function cats (count) {
 function cars (count, color) {
   console.log(__n("I have one %s car.", "I have %d %s cars.", count, color))
 }
+
+// Create a translatable HTML element from JavaScript
+const domNode = __t("My message to the world")
 ```
 
 ### Declare translatable string (HTML)
@@ -120,6 +123,10 @@ Print a localized string. `%s` will be replaced with `arg`s.
 
 Print a localized string with appropriate pluralization. If `%d` is provided in
 the string, the `count` will replace this placeholder.
+
+**i18n.__t(str)**
+
+Create an i18n HTML element containing a localized string.
 
 **i18n.setLocale(language)**
 
