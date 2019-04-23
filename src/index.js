@@ -4,7 +4,7 @@
  */
 let i18n
 
-const env = require("@cosmic-plus/jsutils/env")
+const env = require("@cosmic-plus/jsutils/es5/env")
 
 if (env.isBrowser) {
   const Y18N = require("y18n-browser")
