@@ -5,8 +5,8 @@
   "author": "MisterTicot",
   "repository": "github:cosmic-plus/node-i18n",
   "license": "MIT",
-  "browserslist": "last 4 versions, > 0.1%",
   "main": "src/index.js",
+  "module": "es5/index.js",
   "keywords": [
     "i18n",
     "translation",
@@ -18,13 +18,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write --no-semi 'src/*.js' '*.js' '*.json' '*.md'",
     "eslint": "eslint --fix 'src/*.js' '*.js'",
-    "lint": "npm run prettier && npm run eslint"
+    "lint": "npm run prettier && npm run eslint",
+    "build": "babel --delete-dir-on-start --out-dir es5 src",
+    "watch": "babel --watch --delete-dir-on-start --out-dir es5 src"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "eslint": "^5.6.1",
     "prettier": "^1.17.0"
   },
   "dependencies": {
+    "@babel/runtime": "^7.4.3",
     "@cosmic-plus/jsutils": "^2.0.0",
     "y18n": "^4.0.0",
     "y18n-browser": "^1.0.2"
