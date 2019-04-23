@@ -44,23 +44,23 @@ i18n.useSystemLocale()   //or i18n.setLocale(language)
 
 ```js
 // Load translation utilities
-const {__, __n, __t} = require("@cosmic-plus/i18n")
+const { __, __n, __t } = require("@cosmic-plus/i18n")
 
 // Simple message.
 console.log(__("Hello, world!"))
 
 // Message with variables.
-function greetings (name) {
+function greetings(name) {
   console.log(__("How are you, %s?", name))
 }
 
 // Message with singular/plural switch.
-function cats (count) {
+function cats(count) {
   console.log(__n("There is %d cat.", "There are %d cats.", count))
 }
 
 // Message with both variables and singular/plural switch
-function cars (count, color) {
+function cars(count, color) {
   console.log(__n("I have one %s car.", "I have %d %s cars.", count, color))
 }
 
@@ -113,24 +113,24 @@ The JSON translation files are located in `${project_root}/locales`.
 ## Complete documentation
 
 The `i18n-extractor` documentation is
- [here](https://github.com/cosmic-plus/node-i18n-extractor).
+[here](https://github.com/cosmic-plus/node-i18n-extractor).
 
-**i18n.__(str, arg, arg, arg)**
+**i18n.\_\_(str, arg, arg, arg)**
 
 Print a localized string. `%s` will be replaced with `arg`s.
 
-**i18n.__n(singular, plural, count, arg, arg, arg)**
+**i18n.\_\_n(singular, plural, count, arg, arg, arg)**
 
 Print a localized string with appropriate pluralization. If `%d` is provided in
 the string, the `count` will replace this placeholder.
 
-**i18n.__t(str)**
+**i18n.\_\_t(str)**
 
 Create an i18n HTML element containing a localized string.
 
 **i18n.setLocale(language)**
 
-Set the current locale being used. In browser environment, update *document* DOM
+Set the current locale being used. In browser environment, update _document_ DOM
 node accordingly.
 
 **i18n.getLocale()**
@@ -148,7 +148,7 @@ Returns the system locale.
 **i18n.useSystemLocale()**
 
 Set the current locale to the system locale. In browser environment, update
-*document* DOM node accordingly.
+_document_ DOM node accordingly.
 
 **i18n.addTranslation(language, translation)**
 

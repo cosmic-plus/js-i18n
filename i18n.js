@@ -14,7 +14,6 @@ if (env.isBrowser) {
   module.exports = i18n = y18n({ updateFiles: false })
 }
 
-
 /*******************************************************************************
  * Additional utilities
  */
@@ -25,10 +24,12 @@ if (env.isBrowser) {
  * @param  {String} message
  * @return {HTMLElement}
  */
-i18n.__t = env.isBrowser && function (message) {
-  const domNode = document.createElement("i18n")
-  domNode.textContent = i18n.__(message)
-  return domNode
+if (env.isBrowser) {
+  i18n.__t = function (message) {
+    const domNode = document.createElement("i18n")
+    domNode.textContent = i18n.__(message)
+    return domNode
+  }
 }
 
 /**
@@ -38,8 +39,11 @@ i18n.__t = env.isBrowser && function (message) {
  */
 i18n.systemLocale = function () {
   if (env.isBrowser) {
-    if (navigator.languages && navigator.languages[0]) return navigator.languages[0]
-    else return navigator.language || navigator.browserLanguage
+    if (navigator.languages && navigator.languages[0]) {
+      return navigator.languages[0]
+    } else {
+      return navigator.language || navigator.browserLanguage
+    }
   } else {
     // Taken from https://github.com/noob9527/universal-locale/blob/master/index.ts
     const env = process.env
@@ -65,7 +69,7 @@ i18n.setLocale = function (language) {
  * Set the current local to the system locale.
  */
 i18n.useSystemLocale = function () {
-  i18n.setLocale(i18n.systemLocale().replace(/-.*/,""))
+  i18n.setLocale(i18n.systemLocale().replace(/-.*/, ""))
 }
 
 /**
@@ -86,8 +90,10 @@ i18n.addTranslation = function (language, translation) {
  *
  * @param  {HTMLElement} [element] `document` by default
  */
-i18n.translateDom = env.isBrowser && function (element = document) {
-  element.querySelectorAll("i18n").forEach(node => {
-    node.textContent = i18n.__(node.textContent)
-  })
+if (env.isBrowser) {
+  i18n.translateDom = function (element = document) {
+    element.querySelectorAll("i18n").forEach(node => {
+      node.textContent = i18n.__(node.textContent)
+    })
+  }
 }
