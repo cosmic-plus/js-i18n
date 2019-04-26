@@ -1,6 +1,6 @@
 {
   "name": "@cosmic-plus/i18n",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Lightweight i18n implementation that works both in Node.js and browser",
   "author": "MisterTicot",
   "repository": "github:cosmic-plus/node-i18n",
@@ -27,7 +27,7 @@
     "@babel/core": "^7.4.3",
     "@babel/plugin-transform-runtime": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
-    "eslint": "^5.6.1",
+    "eslint": "^5.16.0",
     "prettier": "^1.17.0"
   },
   "dependencies": {
