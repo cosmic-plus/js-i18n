@@ -1,10 +1,10 @@
 # @cosmic-plus/i18n
 
-![Licence](https://img.shields.io/github/license/cosmic-plus/js-{package}.svg)
-[![Dependencies](https://david-dm.org/cosmic-plus/js-{package}/status.svg)](https://david-dm.org/cosmic-plus/js-{package})
-![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/@cosmic-plus/{package}.svg)
-![Size](https://img.shields.io/bundlephobia/minzip/@cosmic-plus/{package}.svg)
-![Downloads](https://img.shields.io/npm/dt/@cosmic-plus/{package}.svg)
+![Licence](https://img.shields.io/github/license/cosmic-plus/js-i18n.svg)
+[![Dependencies](https://david-dm.org/cosmic-plus/js-i18n/status.svg)](https://david-dm.org/cosmic-plus/js-i18n)
+![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/@cosmic-plus/i18n.svg)
+![Size](https://img.shields.io/bundlephobia/minzip/@cosmic-plus/i18n.svg)
+![Downloads](https://img.shields.io/npm/dt/@cosmic-plus/i18n.svg)
 
 Lightweight internationalization framework that supports both Node.js and
 browser environment. Based on [y18n](https://www.npmjs.com/package/y18n) and
