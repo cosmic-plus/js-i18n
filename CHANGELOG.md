@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.3.0 - 2021-01-08
+
+### Added
+
+- Readme.md:: Add badges.
+
+### Changed
+
+- Meta: Update dependencies.
+
 ## 1.2.0 - 2019-02-26
 
 ### Added

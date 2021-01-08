@@ -1,6 +1,6 @@
 {
   "name": "@cosmic-plus/i18n",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Lightweight i18n implementation that works both in Node.js and browser",
   "author": "MisterTicot",
   "homepage": "https://cosmic.plus/#view:js-i18n",
