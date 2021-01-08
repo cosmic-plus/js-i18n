@@ -24,17 +24,17 @@
     "watch": "babel --watch --delete-dir-on-start --out-dir es5 src"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
-    "@babel/plugin-transform-runtime": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "eslint": "^5.16.0",
-    "prettier": "^1.17.0"
+    "prettier": "^1.19.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.3",
-    "@cosmic-plus/jsutils": "^2.0.0",
-    "y18n": "^4.0.0",
+    "@babel/runtime": "^7.12.5",
+    "@cosmic-plus/jsutils": "^2.0.2",
+    "y18n": "^4.0.1",
     "y18n-browser": "^1.0.2"
   }
 }
